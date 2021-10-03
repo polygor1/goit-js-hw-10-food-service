@@ -4,10 +4,14 @@ import menuTemplateElement from './templates/menu.hbs';
 
 let menu = document.querySelector('.js-menu');
 
-function createFoodMenu(array) {
-  const foodList = array.map(foodData => menuTemplateElement(foodData)).join('');
-  menu.insertAdjacentHTML('beforeend', foodList);
-};
+// function createFoodMenu(array) {
+//   const foodList = array.map(food => menuTemplateElement(food)).join('');
+//   menu.insertAdjacentHTML('beforeend', foodList);
+// };
 
-createFoodMenu(menuDataElements);
+// createFoodMenu(menuDataElements);
 
+const foodMenu = menuDataElements.reduce((acc, item) =>
+  acc + menuTemplateElement(item), "");
+
+menu.insertAdjacentHTML("afterbegin", foodMenu);
