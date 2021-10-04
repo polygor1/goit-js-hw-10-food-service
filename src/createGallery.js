@@ -1,4 +1,5 @@
-export default function createGallegy(arrayData, fragmentHTML, insertPoint) {
+export default
+  function createGallegy(arrayData, fragmentHTML, insertPoint) {
   insertPoint.insertAdjacentHTML("afterbegin", arrayData.reduce((acc, item) => acc + fragmentHTML(item), ""))
 };
 
