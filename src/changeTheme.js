@@ -33,6 +33,7 @@ function changeTheme() {
 };
 
 setTheme();
+changeTheme();
 themeSwitch.addEventListener('change', changeTheme);
 
 
